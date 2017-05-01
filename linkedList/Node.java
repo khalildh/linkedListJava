@@ -10,22 +10,35 @@ public class Node {
 
 	Node(int val) {
 		data = val;
+		next = null;
 	}
 
 	Node push() {
 		return next;
 	}
 
-	Node push(int val) {
-		next = new Node(val);
-		return next;
+	void push(int val) {
+		Node ob = this;
+		while (ob.next != null) {
+
+			if (ob.next == null) {
+				ob.next = new Node(val);
+			}
+
+			ob = ob.next;
+			System.out.println(next);
+		}
+
+		if (ob.next == null) {
+				ob.next = new Node(val);
+		}
 	}
 
-	Node pushFront(int val) {
-		
+	void pushFront(int val) {
+		Node ob = this;
+
+		this = new Node(val);
+
+		this.next = ob;
 	}
-
-	// pop(int val) {
-
-	// }
 }

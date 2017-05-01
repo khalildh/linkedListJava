@@ -11,9 +11,17 @@ class Main {
 
 		System.out.println("Second Node: " + ob.next.data);
 
-		ob.next.push(3);
+		ob.push(3);
 
 		System.out.println("Third Node: " + ob.next.next.data);
+
+		ob.push(100);
+
+		System.out.println("Fourth Node: " + ob.next.next.next.data);
+
+		ob.pushFront(45);
+
+		System.out.println("New First Node: " + ob.data);
 
 	}
 }
